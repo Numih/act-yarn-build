@@ -5,12 +5,6 @@ inputs:
     description: 'Node version'
     required: false
     default: 14.x
-  user:
-    description: 'Repository User'
-    required: true
-  password:
-    description: 'Repository Password'
-    required: true
 runs:
   using: "composite"
     steps:
