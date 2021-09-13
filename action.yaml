@@ -19,7 +19,7 @@ runs:
     shell: bash
     
   - name: Setup npm registry
-    run: echo '//npm.pkg.github.com/:_authToken=${{secrets.NPM_REGISTRY_SECRET}}'
+    run: echo '//npm.pkg.github.com/:_authToken=${{secrets.NPM_REGISTRY_SECRET}} > ~/.npmrc'
     shell: bash
 
   - name: Yarn install
