@@ -7,16 +7,16 @@ inputs:
     default: 14.x
 runs:
   using: "composite"
-    steps:
-    - name: Setup yarn with node ${{ inputs.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ inputs.node-version }}
-        cache: 'npm'
-    - run: npm install --global yarn
-    
-    - name: Yarn install
-      run: yarn install
-      
-    - name: Yarn build
-      run: yarn build
+  steps:
+  - name: Setup yarn with node ${{ inputs.node-version }}
+    uses: actions/setup-node@v2
+    with:
+      node-version: ${{ inputs.node-version }}
+      cache: 'npm'
+  - run: npm install --global yarn
+
+  - name: Yarn install
+    run: yarn install
+
+  - name: Yarn build
+    run: yarn build
