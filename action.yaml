@@ -5,6 +5,9 @@ inputs:
     description: 'Node version'
     required: false
     default: 14.x
+  npm-secret:
+    description: 'Chave secreta para acessar o npm registry'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -19,7 +22,7 @@ runs:
     shell: bash
     
   - name: Setup npm registry
-    run: echo '//npm.pkg.github.com/:_authToken=${{secrets.NPM_REGISTRY_SECRET}}' > ~/.npmrc
+    run: echo '//npm.pkg.github.com/:_authToken=${{ inputs.npm-secret }}' > ~/.npmrc
     shell: bash
 
   - name: Yarn install
