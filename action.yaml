@@ -17,6 +17,10 @@ runs:
   - name: Setup yarn
     run: npm install --global yarn
     shell: bash
+    
+  - name: Setup npm registry
+    run: echo '//npm.pkg.github.com/:_authToken=${{secrets.NPM_REGISTRY_SECRET}}'
+    shell: bash
 
   - name: Yarn install
     run: yarn install
