@@ -29,6 +29,10 @@ runs:
     run: yarn install
     shell: bash
 
-  - name: Yarn build
-    run: yarn build
+  - name: Yarn lerna bootstrap
+    run: yarn lerna bootstrap
+    shell: bash
+    
+  - name: Yarn lerna build
+    run: yarn lerna run build
     shell: bash
