@@ -28,6 +28,12 @@ runs:
   - name: Yarn install
     run: yarn install
     shell: bash
+    
+  - name: Yarn install app
+    run: |
+          cd app
+          yarn 
+    shell: bash
 
   - name: Yarn lerna bootstrap
     run: yarn lerna bootstrap
