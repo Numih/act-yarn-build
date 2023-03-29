@@ -4,7 +4,7 @@ inputs:
   node-version:
     description: 'Node version'
     required: false
-    default: 16.x
+    default: 18.x
   npm-secret:
     description: 'Chave secreta para acessar o npm registry'
     required: true
@@ -29,12 +29,6 @@ runs:
     run: yarn install
     shell: bash
     
-  - name: Yarn install app
-    run: |
-          cd app
-          yarn 
-    shell: bash
-
   - name: Yarn lerna bootstrap
     run: yarn lerna bootstrap
     shell: bash
