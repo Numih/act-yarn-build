@@ -4,7 +4,7 @@ inputs:
   node-version:
     description: 'Node version'
     required: false
-    default: 24.x
+    default: 23.x
   npm-secret:
     description: 'Chave secreta para acessar o npm registry'
     required: true
