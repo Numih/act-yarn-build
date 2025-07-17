@@ -25,15 +25,7 @@ runs:
     shell: bash
 
   - name: Yarn install
-    run: yarn install --production
-    shell: bash
-  
-  - name: Install rspack CLI globally
-    run: yarn global add @rspack/cli
-    shell: bash
-
-  - name: Add Yarn global bin to PATH
-    run: echo "$HOME/.yarn/bin" >> $GITHUB_PATH
+    run: yarn install
     shell: bash
 
   - name: Run build
